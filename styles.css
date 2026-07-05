@@ -24,6 +24,12 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
+  /* visualization colors */
+  --viz-bar-bg: #E9F6F4;
+  --viz-bar-fill: #EE7B5A;
+  --viz-line: #4C97A6;
+  --viz-donut-bg: #EAF3D8;
+  --viz-donut-fill: #E3A73B;
 }
 
 *{ box-sizing: border-box; }
@@ -243,17 +249,6 @@ p{ margin: 0; }
   margin-bottom: 34px;
 }
 .hero-cta{ display:flex; gap: 14px; flex-wrap: wrap; }
-.hero-frog{
-  position:absolute;
-  right: -30px;
-  bottom: -10px;
-  width: 300px;
-  opacity: 0.95;
-  z-index:1;
-}
-@media (max-width: 900px){
-  .hero-frog{ width: 180px; right:-20px; bottom: 0; opacity: .55; }
-}
 .scallop{
   position: relative;
   height: 46px;
@@ -291,14 +286,20 @@ p{ margin: 0; }
   margin: 36px 0 56px;
 }
 .metric-card{
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 26px 24px;
-  box-shadow: var(--shadow);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 8px 4px;
+  box-shadow: none;
   position: relative;
 }
-.metric-card svg{ width:28px; height:28px; margin-bottom: 14px; }
+.metric-card svg{
+  display:block;
+  width: 140px;
+  height: 80px;
+  margin: 0 auto 14px;
+}
+.metric-card .metric-number{ color: var(--forest-dark); }
 .metric-number{
   display:block;
   font-family:'Fraunces', serif;
@@ -337,7 +338,7 @@ p{ margin: 0; }
 /* ---------- program cards ---------- */
 .programs-grid{
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 22px;
   margin-bottom: 22px;
 }
@@ -515,13 +516,6 @@ p{ margin: 0; }
 }
 .contact-link:hover{ border-color: var(--coral); color: var(--lily-soft); }
 .contact-link svg{ width:20px; height:20px; }
-.footer-frog{
-  position:absolute;
-  left: -20px;
-  bottom: -30px;
-  width: 190px;
-  opacity: 0.9;
-}
 .footer-bottom{
   margin-top: 70px;
   padding-top: 24px;
@@ -538,7 +532,6 @@ p{ margin: 0; }
 }
 @media (max-width: 760px){
   .contact-inner{ flex-direction:column; align-items:flex-start; }
-  .footer-frog{ display:none; }
 }
 
 /* ---------- case study page ---------- */

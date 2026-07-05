@@ -18,14 +18,7 @@
 <!-- ============ ICON SPRITE (used via <use href="#i-...">) ============ -->
 <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
 <defs>
-  <symbol id="i-frog-face" viewBox="0 0 48 48">
-    <ellipse cx="24" cy="27" rx="15" ry="13" fill="currentColor"/>
-    <circle cx="13" cy="15" r="7" fill="currentColor"/>
-    <circle cx="35" cy="15" r="7" fill="currentColor"/>
-    <circle cx="13" cy="15" r="2.6" fill="#2B2013"/>
-    <circle cx="35" cy="15" r="2.6" fill="#2B2013"/>
-    <path d="M15 30 Q24 37 33 30" stroke="#2B2013" stroke-width="2" fill="none" stroke-linecap="round"/>
-  </symbol>
+
   <symbol id="i-frog-guide" viewBox="0 0 40 40">
     <ellipse cx="20" cy="27" rx="14" ry="9.5" fill="#2C6B47"/>
     <circle cx="12" cy="14" r="7" fill="#2C6B47"/>
@@ -84,7 +77,7 @@
 <!-- ============ NAV ============ -->
 <nav class="site-nav">
   <div class="wrap">
-    <a href="#top" class="nav-name"><svg width="24" height="24" style="color:var(--forest)"><use href="#i-frog-face"></use></svg>Jasmine Kwan</a>
+    <a href="#top" class="nav-name">Jasmine Kwan</a>
     <ul class="nav-links">
       <li><a href="#abc">ABC Charity</a></li>
       <li><a href="#other-work">Other Work</a></li>
@@ -97,7 +90,7 @@
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow hero-eyebrow"><svg width="14" height="14"><use href="#i-frog-face"></use></svg> Product Manager</span>
+    <span class="eyebrow hero-eyebrow">Product Manager</span>
     <h1>Jasmine Kwan</h1>
     <p class="role-line">The most fabulous PM you'll ever hire</p>
     <p class="intro">
@@ -108,25 +101,6 @@
       <a href="#contact" class="btn btn-ghost">Get in touch</a>
     </div>
   </div>
-  <svg class="hero-frog" viewBox="0 0 300 260" aria-hidden="true">
-    <ellipse cx="150" cy="225" rx="130" ry="22" fill="#17402C"/>
-    <path d="M150 165c66 0 120 27 120 60H30c0-33 54-60 120-60z" fill="#2C6B47"/>
-    <ellipse cx="70" cy="192" rx="26" ry="16" fill="#4F9C5F" transform="rotate(-18 70 192)"/>
-    <ellipse cx="230" cy="192" rx="26" ry="16" fill="#4F9C5F" transform="rotate(18 230 192)"/>
-    <ellipse cx="150" cy="175" rx="82" ry="62" fill="#5CAE6A"/>
-    <ellipse cx="150" cy="196" rx="56" ry="36" fill="#EAF3D8"/>
-    <ellipse cx="92" cy="185" rx="16" ry="10" fill="#5CAE6A" transform="rotate(25 92 185)"/>
-    <ellipse cx="208" cy="185" rx="16" ry="10" fill="#5CAE6A" transform="rotate(-25 208 185)"/>
-    <circle cx="118" cy="118" r="26" fill="#5CAE6A"/>
-    <circle cx="182" cy="118" r="26" fill="#5CAE6A"/>
-    <circle cx="118" cy="118" r="14" fill="#FBF3E4"/>
-    <circle cx="182" cy="118" r="14" fill="#FBF3E4"/>
-    <circle cx="121" cy="121" r="7" fill="#1E1810"/>
-    <circle cx="185" cy="121" r="7" fill="#1E1810"/>
-    <path d="M118 168 Q150 190 182 168" stroke="#1E1810" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-    <ellipse cx="108" cy="153" rx="8" ry="5" fill="#F3A78A" opacity="0.55"/>
-    <ellipse cx="192" cy="153" rx="8" ry="5" fill="#F3A78A" opacity="0.55"/>
-  </svg>
 </header>
 <div class="scallop"></div>
 
@@ -143,17 +117,33 @@
 
     <div class="metrics-row">
       <div class="metric-card">
-        <svg style="color:var(--coral)"><use href="#i-people"></use></svg>
+        <!-- Horizontal bar visualization -->
+        <svg class="viz-bar" viewBox="0 0 120 60" aria-hidden="true">
+          <rect x="6" y="10" width="108" height="12" rx="6" fill="var(--viz-bar-bg)" />
+          <rect x="6" y="32" width="74" height="12" rx="6" fill="var(--viz-bar-fill)" />
+        </svg>
         <span class="metric-number">500+</span>
         <span class="metric-label">participants reached across programs</span>
       </div>
+
       <div class="metric-card">
-        <svg style="color:var(--pond)"><use href="#i-target"></use></svg>
+        <!-- Sparkline / line visualization -->
+        <svg class="viz-line" viewBox="0 0 120 60" aria-hidden="true">
+          <polyline fill="none" stroke="var(--viz-line)" stroke-width="3" points="6,44 28,30 50,34 72,20 94,26 112,18" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="112" cy="18" r="3.5" fill="var(--viz-line)" />
+        </svg>
         <span class="metric-number">4</span>
-        <span class="metric-label">programs developed and launched/span>
+        <span class="metric-label">programs developed and launched</span>
       </div>
+
       <div class="metric-card">
-        <svg style="color:var(--mustard)"><use href="#i-heart"></use></svg>
+        <!-- Donut / percentage visualization -->
+        <svg class="viz-donut" viewBox="0 0 60 60" aria-hidden="true">
+          <circle cx="30" cy="30" r="22" fill="var(--viz-donut-bg)" />
+          <circle cx="30" cy="30" r="22" fill="none" stroke="var(--viz-donut-fill)" stroke-width="8" stroke-dasharray="41.5 138" stroke-linecap="round" transform="rotate(-90 30 30)" />
+          <circle cx="30" cy="30" r="12" fill="#FBF3E4" />
+          <text x="30" y="34" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#2B2013" font-weight="700">60%</text>
+        </svg>
         <span class="metric-number">60%</span>
         <span class="metric-label">increase in program participation YoY</span>
       </div>
@@ -163,7 +153,6 @@
     <div class="programs-grid">
 
       <article class="card">
-        <div class="card-icon" style="color:var(--forest)"><svg width="26" height="26"><use href="#i-frog-face"></use></svg></div>
         <span class="card-tag">Vancouver</span>
         <h3>Kid's Programming</h3>
         <p class="card-desc">Give a kid a ball and he'll kick it. Teach a kid to play soccer and he will still kick the ball</p>
@@ -177,7 +166,6 @@
       </article>
 
       <article class="card">
-        <div class="card-icon" style="color:var(--forest)"><svg width="26" height="26"><use href="#i-frog-face"></use></svg></div>
         <span class="card-tag">Vancouver</span>
         <h3>Teens</h3>
         <p class="card-desc">Talk about the bigger programming gap and community demand</p>
@@ -191,7 +179,6 @@
       </article>
 
       <article class="card">
-        <div class="card-icon" style="color:var(--forest)"><svg width="26" height="26"><use href="#i-frog-face"></use></svg></div>
         <span class="card-tag">Surrey</span>
         <h3>Surrey Programming</h3>
         <p class="card-desc">Taking Strides India edition</p>
@@ -205,8 +192,7 @@
       </article>
 
       <article class="card">
-        <div class="card-icon" style="color:var(--forest)"><svg width="26" height="26"><use href="#i-frog-face"></use></svg></div>
-        <span class="card-tag">Vancouver/span>
+        <span class="card-tag">Vancouver</span>
         <h3>Toddlers</h3>
         <p class="card-desc">Scouting for the next Messi</p>
         <div class="card-footer">
@@ -274,9 +260,8 @@
 
       <article class="org-card">
         <div class="org-top">
-          <div class="org-badge"><svg width="22" height="22" style="color:var(--pond)"><use href="#i-frog-face"></use></svg></div>
           <div>
-            <h3>[Bright Path Youth Alliance]</h3>
+            <h3>Behaviour Interventionist</h3>
             <span class="org-role">[Product Manager, contract]</span>
           </div>
         </div>
@@ -290,9 +275,8 @@
 
       <article class="org-card">
         <div class="org-top">
-          <div class="org-badge"><svg width="22" height="22" style="color:var(--coral)"><use href="#i-frog-face"></use></svg></div>
           <div>
-            <h3>[Riverstone Community Health]</h3>
+            <h3>SUS</h3>
             <span class="org-role">[Consulting Product Manager]</span>
           </div>
         </div>
@@ -306,9 +290,8 @@
 
       <article class="org-card">
         <div class="org-top">
-          <div class="org-badge"><svg width="22" height="22" style="color:var(--mustard)"><use href="#i-frog-face"></use></svg></div>
           <div>
-            <h3>[GreenLeaf Housing Collective]</h3>
+            <h3>Vancouver Coastal Health</h3>
             <span class="org-role">[Associate Product Manager]</span>
           </div>
         </div>
@@ -322,9 +305,8 @@
 
       <article class="org-card">
         <div class="org-top">
-          <div class="org-badge"><svg width="22" height="22" style="color:var(--lily)"><use href="#i-frog-face"></use></svg></div>
           <div>
-            <h3>[Harbor Digital Literacy Project]</h3>
+            <h3>Psychology Students Association</h3>
             <span class="org-role">[Product Manager, volunteer]</span>
           </div>
         </div>
@@ -347,8 +329,7 @@
       <div>
         <span class="eyebrow" style="background:rgba(255,252,245,0.14); color:var(--lily-soft)">Let's hop on a call</span>
         <h2>[Ready when you are.]</h2>
-        <p class="contact-sub">[A short, warm closing line inviting recruiters or hiring
-          managers to reach out — email, LinkedIn, or however you prefer to be contacted.]</p>
+        <p class="contact-sub">Excited to connect and discuss potential opportunities!</p>
       </div>
       <div class="contact-links">
         <a class="contact-link" href="mailto:you@example.com"><svg><use href="#i-mail"></use></svg> you@example.com</a>
@@ -357,22 +338,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© [2026] [Your Name] · Built with a little pond magic 🐸</span>
-      <span>Vancouver, BC</span>
+      <span>© [2026] [Jasmine Kwan] </span>
     </div>
-    <svg class="footer-frog" viewBox="0 0 300 260" aria-hidden="true">
-      <ellipse cx="150" cy="225" rx="130" ry="22" fill="#123A28"/>
-      <path d="M150 165c66 0 120 27 120 60H30c0-33 54-60 120-60z" fill="#1f4c34"/>
-      <ellipse cx="150" cy="175" rx="82" ry="62" fill="#2a6647"/>
-      <ellipse cx="150" cy="196" rx="56" ry="36" fill="#3a7a55"/>
-      <circle cx="118" cy="118" r="26" fill="#2a6647"/>
-      <circle cx="182" cy="118" r="26" fill="#2a6647"/>
-      <circle cx="118" cy="118" r="14" fill="#FBF3E4"/>
-      <circle cx="182" cy="118" r="14" fill="#FBF3E4"/>
-      <circle cx="121" cy="121" r="7" fill="#122016"/>
-      <circle cx="185" cy="121" r="7" fill="#122016"/>
-      <path d="M118 168 Q150 188 182 168" stroke="#122016" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-    </svg>
+    
   </div>
 </footer>
 
